@@ -50,9 +50,58 @@
             <input type="email" name="email" placeholder="type email and hit enter" required>
         </form>
     </section>
+
     <footer>
-        <p class="copyright">copyright 2025 Marioclub</p>
+        <section class="revised-footer">
+            <div class="logo-placeholder">
+                <h3>Marioclub</h3>
+                </div>
+    
+            <div class="interactive-links">
+                <h3>Explore More</h3>
+                <ul>
+                    <li><a href="/news.html">Latest News</a></li>
+                    <li><a href="/games.html">New Games</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <div class="fun-fact-revised">
+                <h3>Did You Know?</h3>
+                <p id="funFactTextRevised">Mario first appeared as 'Jumpman' in Donkey Kong!</p>
+                <button id="newFactButtonRevised">Another Fact?</button>
+            </div>
+        </section>
+        <p class="copyright-info">
+            &copy; 2025 Marioclub | Developed by Soumil Mittal
+        </p>
     </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Fun Fact (Revised Version)
+            const funFactTextRevised = document.getElementById('funFactTextRevised');
+            const newFactButtonRevised = document.getElementById('newFactButtonRevised');
+            const funFacts = [
+                "Luigi is taller than Mario.",
+                "Bowser's full name is King Bowser Koopa.",
+                "The Super Mushroom makes Mario bigger.",
+                "The Fire Flower allows Mario to throw fireballs.",
+                "Yoshi's first appearance was in Super Mario World."
+            ];
+            let currentFactIndex = 0;
+    
+            newFactButtonRevised.addEventListener('click', () => {
+                currentFactIndex = (currentFactIndex + 1) % funFacts.length;
+                funFactTextRevised.textContent = funFacts[currentFactIndex];
+                // Add a subtle animation class
+                funFactTextRevised.classList.add('fact-fade-in');
+                setTimeout(() => {
+                    funFactTextRevised.classList.remove('fact-fade-in');
+                }, 500);
+            });
+        });
+    </script>
 </body>
 
 </html>
