@@ -8,8 +8,10 @@
 
 <body>
     <header>
-        <h1>Marioclub</h1>
+        <h1 class="animated-logo">Marioclub</h1>
+        <img src="logo.webp" alt="Mario Logo" class="header-logo">
     </header>
+
     <section class="banner">
         <img src="banner.png" alt="marioclub welcome banner">
         <div class="welcome">
@@ -22,27 +24,79 @@
             <li><a href="/news.html">Latest news</a></li>
             <li><a href="/games.html">New games</a></li>
             <li><a href="/contact.html">Contact us</a></li>
+            <li><a href="/contact.html">Legacy</a></li>
         </ul>
     </nav>
     <main>
-        <article>
-            <h2>Its a me, Mario</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae nesciunt quasi sequi ipsum totam
-                inventore quos maxime consectetur distinctio aut, eaque aspernatur reprehenderit dolore animi. Adipisci
-                doloremque ipsum nobis blanditiis?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus itaque quidem, veritatis,
-                molestiae quasi sapiente ad doloribus dicta provident magnam sunt libero tenetur ab. Tenetur delectus
-                deleniti neque veniam dignissimos.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo laboriosam maxime fugit maiores ipsum,
-                iusto id illo necessitatibus nulla facilis sed rerum voluptate minus magnam? Voluptatibus tempora
-                incidunt obcaecati excepturi.
-            </p>
-        </article>
+        <article class="mario-article">
+            <img src="it is mario.png" alt="Mario" class="mario-image">
+            <div class="mario-text">
+                <h2>Its me, Mario</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae nesciunt quasi sequi ipsum totam
+                    inventore quos maxime consectetur distinctio aut, eaque aspernatur reprehenderit dolore animi. Adipisci
+                    doloremque ipsum nobis blanditiis?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus itaque quidem, veritatis,
+                    molestiae quasi sapiente ad doloribus dicta provident magnam sunt libero tenetur ab. Tenetur delectus
+                    deleniti neque veniam dignissimos.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo laboriosam maxime fugit maiores ipsum,
+                    iusto id illo necessitatibus nulla facilis sed rerum voluptate minus magnam? Voluptatibus tempora
+                    incidunt obcaecati excepturi.
+                </p>
+            </div>
+        </main>
+
         <ul class="images">
             <li><img src="thumb_1.png" alt="mario thumb 1"></li>
             <li><img src="thumb_2.png" alt="mario thumb 2"></li>
         </ul>
-    </main>
+
+        <section class="featured-game">
+            <div class="featured-content">
+                <img src="featured_game.jpg" alt="Featured Game Artwork">
+                <div class="featured-details">
+                    <h2>Super Mario Odyssey</h2>
+                    <p class="tagline">Embark on a globe-trotting adventure with Cappy!</p>
+                    <p class="description">Join Mario on a massive, globe-trotting 3D adventure and use his incredible new abilities to collect Moons so you can power up your Odyssey airship and rescue Princess Peach from Bowser’s wedding plans!</p>
+                    <a href="/games/odyssey.html" class="learn-more-button">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="community-highlights">
+            <h2>Community Love</h2>
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <img src="fan_art_1.jpg" alt="Fan Art 1">
+                    <p class="caption">Awesome Mario fan art by @SuperFan!</p>
+                </div>
+                <div class="highlight-item">
+                    <p class="forum-snippet"><strong>User123:</strong> Just finished playing the new game, it's incredible!</p>
+                </div>
+                <div class="highlight-item">
+                    <img src="fan_art_2.jpg" alt="Fan Art 2">
+                    <p class="caption">Check out this pixel art of Luigi!</p>
+                </div>
+            </div>
+            <a href="/community.html" class="view-more-button">View More Community Content</a>
+        </section>
+
+        <section class="news-carousel-section">
+            <h2>Latest Buzz</h2>
+            <div class="news-grid-flip">
+                <div class="news-card">
+                    <div class="front">
+                        <img src="news_thumb_1.jpg" alt="News 1 Thumbnail">
+                        <h3>New Game Announcement!</h3>
+                        <p class="date">April 25, 2025</p>
+                    </div>
+                    <div class="back">
+                        <p class="excerpt">Get ready for an epic new Mario adventure coming soon!</p>
+                        <a href="/news/article1.html" class="read-more">Read More</a>
+                    </div>
+                </div>
+                </div>
+        </section>
+
     <section class="join">
         <h2>Join Today!</h2>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur vel suscipit </p>
