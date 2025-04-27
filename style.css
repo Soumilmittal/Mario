@@ -138,19 +138,19 @@ nav li a.join {
 .mario-article {
     display: flex;
     align-items: center; /* Vertically center the image and text */
-    gap: 20px; /* Add some space between the image and text */
     margin-bottom: 40px; /* Add some space below the article */
 }
 
 .mario-image {
-    width: 50%; /* Make the image take up 50% of the container width */
-    height: auto; /* Maintain aspect ratio */
-    max-width: none; /* Override any previous max-width */
+    width: 34%;
+    height: auto; 
+    max-width: none; 
+    padding-inline: 80px; /* Add some padding on the left and right */
 }
 
 .mario-text {
     width: 50%; /* Make the text container take up 50% of the container width */
-    padding-left: 20px; /* Add some left padding for spacing */
+    padding-left: 2px; /* Add some left padding for spacing */
     box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
@@ -312,23 +312,48 @@ form input {
     }
 }
 
-/* Main Footer Copyright */
+/* Main Footer */
 footer {
     background: #f63232;
-    /* Match the interactive section */
     color: white;
-    /* Light grey */
     padding: 20px 10px;
     text-align: center;
     font-size: 0.9em;
     border-top: 1px solid #f63232;
-    /* Consistent top border */
     margin-top: 30px;
+    position: relative; /* For positioning the image container */
 }
 
 footer p.copyright-info {
     margin-top: 10px;
     font-size: 1.2em;
+}
+
+.footer-image-container {
+    position: absolute;
+    left: 10px; /* Adjust as needed */
+    bottom: 0;
+    overflow: hidden; /* Hide the image initially */
+    height: 70px; /* Set a height for the animation area */
+    width: 70px; /* Match image width */
+}
+
+.footer-image {
+    width: 70px; /* Adjust image size */
+    height: auto;
+    position: absolute;
+    bottom: -100px; /* Initially hidden below the container */
+    left: 0px; /* Adjust for centering */
+    animation: slideUpDown 2s infinite alternate ease-in-out; /* Apply the animation */
+}
+
+@keyframes slideUpDown {
+    0% {
+        bottom: -50px; /* Start hidden */
+    }
+    100% {
+        bottom: 0; /* End at the bottom of the container (visible) */
+    }
 }
 
 /* Responsive Adjustments */
@@ -350,6 +375,27 @@ footer p.copyright-info {
     .interactive-links ul {
         text-align: center;
     }
+
+    .footer-image-container {
+        left: 5px; /* Adjust for smaller screens */
+        height: 40px;
+        width: 40px;
+    }
+
+    .footer-image {
+        width: 50px;
+        bottom: -50px;
+        animation: slideUpDownMobile 2s infinite alternate ease-in-out; /* Apply mobile animation */
+    }
+
+    @keyframes slideUpDownMobile {
+        0% {
+            bottom: -40px;
+        }
+        100% {
+            bottom: 0;
+        }
+    }
 }
 
 /* Tablet View */
@@ -368,6 +414,27 @@ footer p.copyright-info {
 
     .interactive-links ul {
         text-align: center;
+    }
+
+    .footer-image-container {
+        left: 10px; /* Adjust for tablet */
+        height: 55px;
+        width: 55px;
+    }
+
+    .footer-image {
+        width: 55px;
+        bottom: -55px;
+        animation: slideUpDownTablet 2s infinite alternate ease-in-out; /* Apply tablet animation */
+    }
+
+    @keyframes slideUpDownTablet {
+        0% {
+            bottom: -45px;
+        }
+        100% {
+            bottom: 0;
+        }
     }
 }
 
@@ -454,10 +521,6 @@ p::selection {
 
 }
 
-p::after {
-    content: '...';
-}
-
 /* responsive style */
 
 @media screen and (max-width: 1400px) {
@@ -540,10 +603,9 @@ p::after {
 }
 
 .featured-content img {
-    max-width: 400px;
+    max-width: 350px;
     height: auto;
     border-radius: 8px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .featured-details {
