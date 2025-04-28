@@ -203,6 +203,25 @@ section.join {
     text-align: center;
     padding: 60px 20px;
     color: #4b4b4b;
+    position: relative; /* For positioning the graphic */
+    overflow: hidden; /* To contain potential animation */
+}
+
+.join-graphic {
+    position: absolute;
+    top: 10px; /* Adjust position */
+    left: 10px; /* Adjust position */
+    width: 50px; /* Adjust size */
+    height: auto;
+    opacity: 0.7;
+    /* Optional: Add a subtle animation */
+    animation: spinAndFloat 5s infinite alternate ease-in-out;
+}
+
+@keyframes spinAndFloat {
+    0% { transform: rotate(0deg) translateY(0); }
+    50% { transform: rotate(180deg) translateY(-10px); }
+    100% { transform: rotate(360deg) translateY(0); }
 }
 
 .join h2 {
@@ -210,11 +229,11 @@ section.join {
 }
 
 form input {
-    margin: 20px 0;
+    margin: 30px 0; /* Adjust margin to accommodate graphic */
     padding: 10px 20px;
     font-size: 24px;
     border-radius: 28px;
-    border: 4px solid white;
+    border: 4px solid #f63232; /* Use a Mario color */
 }
 
 .revised-footer {
@@ -346,6 +365,52 @@ footer p.copyright-info {
     left: 0px; /* Adjust for centering */
     animation: slideUpDown 2s infinite alternate ease-in-out; /* Apply the animation */
 }
+.logo-placeholder img {
+    max-width: 100px; /* Adjust the maximum width as needed */
+    height: auto;
+    display: block; /* To prevent extra spacing below the image */
+    margin: 0 auto; /* To center the image within the placeholder if needed */
+}
+.footer-image-container {
+    position: absolute;
+    left: 10px; /* Adjust as needed */
+    bottom: 0;
+    overflow: hidden; /* Hide the image initially */
+    height: 50px; /* Set a height for the animation area */
+    width: 50px; /* Match image width */
+}
+
+.footer-image {
+    width: 50px; /* Adjust image size */
+    height: auto;
+    position: absolute;
+    bottom: -50px; /* Initially hidden below the container */
+    left: 0;
+    animation: slideUpDown 2s infinite alternate ease-in-out; /* Apply the animation */
+}
+
+@keyframes slideUpDown {
+    0% {
+        bottom: -50px; /* Start hidden */
+    }
+    100% {
+        bottom: 0; /* End at the bottom of the container (visible) */
+    }
+}
+
+/* Social Media Section */
+
+.social-icons img {
+    width: 30px; /* Adjust icon size */
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.social-icons a:hover img {
+    opacity: 1;
+}
+
 
 @keyframes slideUpDown {
     0% {
@@ -582,7 +647,6 @@ p::selection {
         top: 0;
     }
 }
-
 
 
 
