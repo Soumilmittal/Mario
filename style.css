@@ -413,16 +413,28 @@ footer p.copyright-info {
 }
 
 /* Social Media Section */
-
 .social-icons img {
-    width: 30px; /* Adjust icon size */
+    width: 30px; /* Slightly smaller */
     height: auto;
+    margin: 0 8px; /* Slightly less horizontal margin */
     opacity: 0.8;
     transition: opacity 0.3s ease-in-out;
+    display: inline-block; /* Ensure they sit nicely in the list */
+    vertical-align: middle; /* Align them vertically with potential text */
 }
 
 .social-icons a:hover img {
-    opacity: 1;
+    opacity: 1; /* Usually 1 is fully opaque, 2 is too high */
+}
+
+.social-icons li {
+    display: inline-block; /* Arrange list items horizontally */
+    margin: 5px 0; /* Add a little vertical margin */
+}
+
+.social-media h3 {
+    font-size: 1.1em; /* Adjust heading size if needed */
+    margin-bottom: 8px;
 }
 
 
