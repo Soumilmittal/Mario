@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -13,10 +13,14 @@ header {
     z-index: 1;
     top: 0;
     left: 0;
-    display: flex; /* Enable flexbox for alignment */
-    justify-content: center; /* Center the heading initially */
-    align-items: center; /* Vertically align heading and logo */
-    transition: padding-left 0.3s ease-in-out, padding-right 0.3s ease-in-out; /* Smooth header padding transition */
+    display: flex;
+    /* Enable flexbox for alignment */
+    justify-content: center;
+    /* Center the heading initially */
+    align-items: center;
+    /* Vertically align heading and logo */
+    transition: padding-left 0.3s ease-in-out, padding-right 0.3s ease-in-out;
+    /* Smooth header padding transition */
 }
 
 .animated-logo {
@@ -25,53 +29,76 @@ header {
     padding: 6px 12px;
     display: inline-block;
     border-radius: 36px;
-    position: relative; /* For positioning context */
-    transition: border-color 0.3s ease-in-out; /* Smooth border color transition */
-    margin-right: 10px; /* Add some space for the logo */
+    position: relative;
+    /* For positioning context */
+    transition: border-color 0.3s ease-in-out;
+    /* Smooth border color transition */
+    margin-right: 10px;
+    /* Add some space for the logo */
 }
 
 .header-logo {
-    width: 40px; /* Adjust logo size */
+    width: 40px;
+    /* Adjust logo size */
     height: auto;
-    opacity: 0; /* Initially hidden */
-    transform: translateX(-75px); /* Start slightly to the left of its final position */
-    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out; /* Smooth fade and slide */
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateX(-75px);
+    /* Start slightly to the left of its final position */
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+    /* Smooth fade and slide */
 }
 
 header:hover .animated-logo {
-    border-color: #ffeb3b; /* Optional: Change border color on hover */
-    padding-left: 10px; /* Keep left padding consistent */
-    padding-right: 75px; /* Make space for the logo */
+    border-color: #ffeb3b;
+    /* Optional: Change border color on hover */
+    padding-left: 10px;
+    /* Keep left padding consistent */
+    padding-right: 75px;
+    /* Make space for the logo */
 }
 
 header:hover .header-logo {
-    opacity: 1; /* Fade in the logo */
-    transform: translateY(5); /* Slide the logo into its final position */
+    opacity: 1;
+    /* Fade in the logo */
+    transform: translateY(5);
+    /* Slide the logo into its final position */
 }
 
 /* Adjust for smaller screens if needed */
 @media screen and (max-width: 768px) {
     header {
-        flex-direction: column; /* Stack heading and logo if needed */
-        align-items: center; /* Center items */
-        padding: 15px; /* Adjust padding */
+        flex-direction: column;
+        /* Stack heading and logo if needed */
+        align-items: center;
+        /* Center items */
+        padding: 15px;
+        /* Adjust padding */
     }
 
     .animated-logo {
-        margin-right: 0; /* Remove right margin */
-        margin-bottom: 10px; /* Add space below heading */
-        padding: 6px 12px; /* Reset padding */
+        margin-right: 0;
+        /* Remove right margin */
+        margin-bottom: 10px;
+        /* Add space below heading */
+        padding: 6px 12px;
+        /* Reset padding */
     }
 
     .header-logo {
-        opacity: 1; /* Always show logo on small screens */
-        transform: translateX(0); /* Reset transform */
-        margin-left: 10px; /* Add some left margin */
+        opacity: 1;
+        /* Always show logo on small screens */
+        transform: translateX(0);
+        /* Reset transform */
+        margin-left: 10px;
+        /* Add some left margin */
     }
 
     header:hover .animated-logo {
-        border-color: white; /* Reset border color */
-        padding-right: 12px; /* Reset right padding */
+        border-color: white;
+        /* Reset border color */
+        padding-right: 12px;
+        /* Reset right padding */
     }
 }
 
@@ -137,27 +164,34 @@ nav li a.join {
 
 .mario-article {
     display: flex;
-    align-items: center; /* Vertically center the image and text */
-    margin-bottom: 40px; /* Add some space below the article */
+    align-items: center;
+    /* Vertically center the image and text */
+    margin-bottom: 40px;
+    /* Add some space below the article */
 }
 
 .mario-image {
     width: 34%;
-    height: auto; 
-    max-width: none; 
-    padding-inline: 80px; /* Add some padding on the left and right */
+    height: auto;
+    max-width: none;
+    padding-inline: 80px;
+    /* Add some padding on the left and right */
 }
 
 .mario-text {
-    width: 50%; /* Make the text container take up 50% of the container width */
-    padding-left: 2px; /* Add some left padding for spacing */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
+    width: 50%;
+    /* Make the text container take up 50% of the container width */
+    padding-left: 2px;
+    /* Add some left padding for spacing */
+    box-sizing: border-box;
+    /* Include padding in the element's total width and height */
 }
 
 .mario-text h2 {
     color: #f63232;
     font-size: 48px;
-    margin-bottom: 10px; /* Add some space below the heading */
+    margin-bottom: 10px;
+    /* Add some space below the heading */
 }
 
 .mario-text p {
@@ -168,20 +202,27 @@ nav li a.join {
 /* Responsive adjustments for smaller screens */
 @media screen and (max-width: 768px) {
     .mario-article {
-        flex-direction: column; /* Stack image and text vertically on smaller screens */
-        align-items: flex-start; /* Align items to the start */
+        flex-direction: column;
+        /* Stack image and text vertically on smaller screens */
+        align-items: flex-start;
+        /* Align items to the start */
     }
 
     .mario-image {
-        width: 100%; /* Image takes full width */
-        margin-bottom: 20px; /* Add space below the image */
+        width: 100%;
+        /* Image takes full width */
+        margin-bottom: 20px;
+        /* Add space below the image */
     }
 
     .mario-text {
-        width: 100%; /* Text takes full width */
-        padding-left: 0; /* Remove left padding */
+        width: 100%;
+        /* Text takes full width */
+        padding-left: 0;
+        /* Remove left padding */
     }
 }
+
 .images {
     text-align: center;
     margin: 80px 0;
@@ -203,11 +244,15 @@ section.join {
     text-align: center;
     padding: 60px 20px;
     color: #4b4b4b;
-    position: relative; /* For positioning the graphic */
-    overflow: hidden; /* To contain potential animation */
+    position: relative;
+    /* For positioning the graphic */
+    overflow: hidden;
+    /* To contain potential animation */
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    /* Stack elements vertically */
+    align-items: center;
+    /* Center items horizontally */
 }
 
 .join h2 {
@@ -221,23 +266,31 @@ section.join {
 
 form {
     display: flex;
-    flex-direction: column; /* Stack input and image in the form */
-    align-items: center; /* Center items horizontally in the form */
-    width: 100%; /* Make form take full width */
-    max-width: 400px; /* Limit form width */
+    flex-direction: column;
+    /* Stack input and image in the form */
+    align-items: center;
+    /* Center items horizontally in the form */
+    width: 100%;
+    /* Make form take full width */
+    max-width: 400px;
+    /* Limit form width */
 }
 
 form input {
-    margin-bottom: 20px; /* Space between input and image */
+    margin-bottom: 20px;
+    /* Space between input and image */
     padding: 10px 20px;
     font-size: 24px;
     border-radius: 28px;
-    border: 4px solid #f63232; /* Use a Mario color */
-    width: 100%; /* Make input take full width of the form */
+    border: 4px solid #f63232;
+    /* Use a Mario color */
+    width: 100%;
+    /* Make input take full width of the form */
 }
 
 .join-graphic {
-    width: 50px; /* Adjust size */
+    width: 50px;
+    /* Adjust size */
     height: auto;
     opacity: 0.7;
     /* Optional: Add a subtle animation */
@@ -245,9 +298,17 @@ form input {
 }
 
 @keyframes spinAndFloat {
-    0% { transform: rotate(0deg) translateY(0); }
-    50% { transform: rotate(180deg) translateY(-10px); }
-    100% { transform: rotate(360deg) translateY(0); }
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(180deg) translateY(-10px);
+    }
+
+    100% {
+        transform: rotate(360deg) translateY(0);
+    }
 }
 
 .revised-footer {
@@ -354,7 +415,8 @@ footer {
     font-size: 0.9em;
     border-top: 1px solid #f63232;
     margin-top: 30px;
-    position: relative; /* For positioning the image container */
+    position: relative;
+    /* For positioning the image container */
 }
 
 footer p.copyright-info {
@@ -364,86 +426,120 @@ footer p.copyright-info {
 
 .footer-image-container {
     position: absolute;
-    left: 10px; /* Adjust as needed */
+    left: 10px;
+    /* Adjust as needed */
     bottom: 0;
-    overflow: hidden; /* Hide the image initially */
-    height: 70px; /* Set a height for the animation area */
-    width: 70px; /* Match image width */
+    overflow: hidden;
+    /* Hide the image initially */
+    height: 70px;
+    /* Set a height for the animation area */
+    width: 70px;
+    /* Match image width */
 }
 
 .footer-image {
-    width: 70px; /* Adjust image size */
+    width: 70px;
+    /* Adjust image size */
     height: auto;
     position: absolute;
-    bottom: -100px; /* Initially hidden below the container */
-    left: 0px; /* Adjust for centering */
-    animation: slideUpDown 2s infinite alternate ease-in-out; /* Apply the animation */
+    bottom: -100px;
+    /* Initially hidden below the container */
+    left: 0px;
+    /* Adjust for centering */
+    animation: slideUpDown 2s infinite alternate ease-in-out;
+    /* Apply the animation */
 }
+
 .logo-placeholder img {
-    max-width: 100px; /* Adjust the maximum width as needed */
+    max-width: 100px;
+    /* Adjust the maximum width as needed */
     height: auto;
-    display: block; /* To prevent extra spacing below the image */
-    margin: 0 auto; /* To center the image within the placeholder if needed */
+    display: block;
+    /* To prevent extra spacing below the image */
+    margin: 0 auto;
+    /* To center the image within the placeholder if needed */
 }
+
 .footer-image-container {
     position: absolute;
-    left: 10px; /* Adjust as needed */
+    left: 10px;
+    /* Adjust as needed */
     bottom: 0;
-    overflow: hidden; /* Hide the image initially */
-    height: 50px; /* Set a height for the animation area */
-    width: 50px; /* Match image width */
+    overflow: hidden;
+    /* Hide the image initially */
+    height: 50px;
+    /* Set a height for the animation area */
+    width: 50px;
+    /* Match image width */
 }
 
 .footer-image {
-    width: 50px; /* Adjust image size */
+    width: 50px;
+    /* Adjust image size */
     height: auto;
     position: absolute;
-    bottom: -50px; /* Initially hidden below the container */
+    bottom: -50px;
+    /* Initially hidden below the container */
     left: 0;
-    animation: slideUpDown 2s infinite alternate ease-in-out; /* Apply the animation */
+    animation: slideUpDown 2s infinite alternate ease-in-out;
+    /* Apply the animation */
 }
 
 @keyframes slideUpDown {
     0% {
-        bottom: -50px; /* Start hidden */
+        bottom: -50px;
+        /* Start hidden */
     }
+
     100% {
-        bottom: 0; /* End at the bottom of the container (visible) */
+        bottom: 0;
+        /* End at the bottom of the container (visible) */
     }
 }
 
 /* Social Media Section */
 .social-icons img {
-    width: 30px; /* Slightly smaller */
+    width: 30px;
+    /* Slightly smaller */
     height: auto;
-    margin: 0 8px; /* Slightly less horizontal margin */
+    margin: 0 8px;
+    /* Slightly less horizontal margin */
     opacity: 0.8;
     transition: opacity 0.3s ease-in-out;
-    display: inline-block; /* Ensure they sit nicely in the list */
-    vertical-align: middle; /* Align them vertically with potential text */
+    display: inline-block;
+    /* Ensure they sit nicely in the list */
+    vertical-align: middle;
+    /* Align them vertically with potential text */
 }
 
 .social-icons a:hover img {
-    opacity: 1; /* Usually 1 is fully opaque, 2 is too high */
+    opacity: 1;
+    /* Usually 1 is fully opaque, 2 is too high */
 }
 
 .social-icons li {
-    display: inline-block; /* Arrange list items horizontally */
-    margin: 5px 0; /* Add a little vertical margin */
+    display: inline-block;
+    /* Arrange list items horizontally */
+    margin: 5px 0;
+    /* Add a little vertical margin */
 }
 
 .social-media h3 {
-    font-size: 1.1em; /* Adjust heading size if needed */
+    font-size: 1.1em;
+    /* Adjust heading size if needed */
     margin-bottom: 8px;
 }
 
 
 @keyframes slideUpDown {
     0% {
-        bottom: -50px; /* Start hidden */
+        bottom: -50px;
+        /* Start hidden */
     }
+
     100% {
-        bottom: 0; /* End at the bottom of the container (visible) */
+        bottom: 0;
+        /* End at the bottom of the container (visible) */
     }
 }
 
@@ -468,7 +564,8 @@ footer p.copyright-info {
     }
 
     .footer-image-container {
-        left: 5px; /* Adjust for smaller screens */
+        left: 5px;
+        /* Adjust for smaller screens */
         height: 40px;
         width: 40px;
     }
@@ -476,13 +573,15 @@ footer p.copyright-info {
     .footer-image {
         width: 50px;
         bottom: -50px;
-        animation: slideUpDownMobile 2s infinite alternate ease-in-out; /* Apply mobile animation */
+        animation: slideUpDownMobile 2s infinite alternate ease-in-out;
+        /* Apply mobile animation */
     }
 
     @keyframes slideUpDownMobile {
         0% {
             bottom: -40px;
         }
+
         100% {
             bottom: 0;
         }
@@ -508,7 +607,8 @@ footer p.copyright-info {
     }
 
     .footer-image-container {
-        left: 10px; /* Adjust for tablet */
+        left: 10px;
+        /* Adjust for tablet */
         height: 55px;
         width: 55px;
     }
@@ -516,13 +616,15 @@ footer p.copyright-info {
     .footer-image {
         width: 55px;
         bottom: -55px;
-        animation: slideUpDownTablet 2s infinite alternate ease-in-out; /* Apply tablet animation */
+        animation: slideUpDownTablet 2s infinite alternate ease-in-out;
+        /* Apply tablet animation */
     }
 
     @keyframes slideUpDownTablet {
         0% {
             bottom: -45px;
         }
+
         100% {
             bottom: 0;
         }
@@ -677,7 +779,8 @@ p::selection {
 
 
 .featured-game {
-    background-color: #fff3e0; /* Light orange/cream background */
+    background-color: #fff3e0;
+    /* Light orange/cream background */
     padding: 40px 20px;
     text-align: center;
 }
@@ -705,7 +808,8 @@ p::selection {
 }
 
 .featured-details h2 {
-    color: #e65100; /* Darker orange */
+    color: #e65100;
+    /* Darker orange */
     font-size: 2.5em;
     margin-bottom: 10px;
 }
@@ -739,13 +843,15 @@ p::selection {
 
 
 .community-highlights {
-    background-color: #f1f8e9; /* Light green background */
+    background-color: #f1f8e9;
+    /* Light green background */
     padding: 40px 20px;
     text-align: center;
 }
 
 .community-highlights h2 {
-    color: #558b2f; /* Dark green */
+    color: #558b2f;
+    /* Dark green */
     font-size: 2.5em;
     margin-bottom: 30px;
 }
@@ -799,7 +905,6 @@ p::selection {
     background-color: #33691e;
 }
 
-
 .news-carousel-section {
     background-color: #e3f2fd;
     padding: 40px 20px;
@@ -821,16 +926,19 @@ p::selection {
 }
 
 .news-card {
-    perspective: 1000px; /* For the 3D effect */
+    perspective: 1000px;
+    /* For the 3D effect */
 }
 
-.front, .back {
+.front,
+.back {
     background-color: white;
     border-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
     padding: 20px;
     position: relative;
-    backface-visibility: hidden; /* Hide the back face initially */
+    backface-visibility: hidden;
+    /* Hide the back face initially */
     transition: transform 0.6s ease-in-out;
     transform-style: preserve-3d;
 }
@@ -839,7 +947,8 @@ p::selection {
     position: absolute;
     top: 0;
     left: 0;
-    transform: rotateY(180deg); /* Rotate the back face to hide it */
+    transform: rotateY(180deg);
+    /* Rotate the back face to hide it */
     text-align: center;
     display: flex;
     flex-direction: column;
