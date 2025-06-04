@@ -16,11 +16,8 @@ header {
     display: flex;
     /* Enable flexbox for alignment */
     justify-content: center;
-    /* Center the heading initially */
     align-items: center;
-    /* Vertically align heading and logo */
     transition: padding-left 0.3s ease-in-out, padding-right 0.3s ease-in-out;
-    /* Smooth header padding transition */
 }
 
 .animated-logo {
