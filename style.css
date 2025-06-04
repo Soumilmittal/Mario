@@ -29,7 +29,6 @@ header {
     position: relative;
     /* For positioning context */
     transition: border-color 0.3s ease-in-out;
-    /* Smooth border color transition */
     margin-right: 10px;
     /* Add some space for the logo */
 }
@@ -57,12 +56,10 @@ header:hover .animated-logo {
 
 header:hover .header-logo {
     opacity: 1;
-    /* Fade in the logo */
     transform: translateY(5);
     /* Slide the logo into its final position */
 }
 
-/* Adjust for smaller screens if needed */
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
