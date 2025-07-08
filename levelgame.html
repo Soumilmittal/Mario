@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Mario-style Game</title>
+    <!-- Tailwind CSS for basic styling and responsiveness -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    </head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- Main Menu -->
+        <div id="mainMenu" class="main-menu hidden">
+            <h1 class="text-4xl font-bold mb-8">Super Mario Clone</h1>
+            <div class="button-group">
+                <button id="startGameButton" class="overlay-button">Start Game</button>
+                <button id="instructionsButton" class="overlay-button">Instructions</button>
+                <button id="leaderboardButton" class="overlay-button">Leaderboard</button>
+            </div>
+        </div>
+
+        <!-- Instructions Screen -->
+        <div id="instructionsScreen" class="instructions-screen hidden">
+            <h2 class="text-3xl font-bold mb-4">How to Play</h2>
+            <p class="text-lg mb-4">Use the <strong>Left and Right arrow keys</strong> (or on-screen buttons) to move.</p>
+            <p class="text-lg mb-4">Use the <strong>Up arrow key or Spacebar</strong> (or on-screen button) to jump.</p>
+            <p class="text-lg mb-4">Jump on enemies to defeat them and earn points.</p>
+            <p class="text-lg mb-4">Collect coins for extra points.</p>
+            <p class="text-lg mb-4">Reach the flag at the end of each level to proceed.</p>
+            <p class="text-lg mb-4">Avoid falling into pits or touching enemies from the side.</p>
+            <button id="backToMenuButtonInstructions" class="overlay-button">Back to Main Menu</button>
+        </div>
+
+        <!-- Leaderboard Screen -->
+        <div id="leaderboardScreen" class="leaderboard-screen hidden">
+            <h2 class="text-3xl font-bold mb-4">High Scores</h2>
+            <ul id="leaderboardList" class="leaderboard-list">
+                <!-- Scores will be dynamically loaded here -->
+                <li>Loading scores...</li>
+            </ul>
+            <button id="backToMenuButtonLeaderboard" class="overlay-button">Back to Main Menu</button>
+        </div>
+
+        <!-- Game Over / Win Overlay -->
+        <div id="gameOverlay" class="game-overlay hidden">
+            <span id="overlayMessage"></span>
+            <button id="restartButton" class="overlay-button">Restart</button>
+            <button id="quitToMenuButton" class="overlay-button">Quit to Main Menu</button>
+        </div>
+
+        <!-- Pause Menu -->
+        <div id="pauseMenu" class="pause-menu hidden">
+            <h2 class="text-3xl font-bold mb-4">Game Paused</h2>
+            <div class="button-group">
+                <button id="resumeButton" class="overlay-button">Resume</button>
+                <button id="quitToMenuButtonPause" class="overlay-button">Quit to Main Menu</button>
+            </div>
+        </div>
+
+        <!-- Level Transition Message -->
+        <div id="levelTransition" class="game-overlay hidden">
+            <span id="levelTransitionMessage" class="text-4xl font-bold"></span>
+        </div>
+
+        <div class="controls">
+            <button id="leftButton" class="control-button">Left</button>
+            <button id="jumpButton" class="control-button">Jump</button>
+            <button id="rightButton" class="control-button">Right</button>
+        </div>
+    </div>
+
+    </body>
+</html>
